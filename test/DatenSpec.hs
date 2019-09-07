@@ -25,7 +25,7 @@ spec = do
       let cases =
             [ ( ("',\n'", (2019, 1, 1), (2019, 1, 2), "%Y-%m-%d")
               , "'2019-01-01',\n'2019-01-02'")
-              ]
+            ]
       mapM_
         (\((x1, x2, x3, x4), expected) ->
            join x1 (Daten x2 x3 x4) `shouldBe` expected)
