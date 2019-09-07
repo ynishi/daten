@@ -68,5 +68,6 @@ main = do
     opts =
       info
         (appOpts <**> helper)
-        (fullDesc <> progDesc "Upgrade for TARGET" <>
-         header "sysup - a command for upgrade")
+        (fullDesc <>
+         progDesc "generate joined string filled dates from start to end" <>
+         header "daten -- generate data n list")
