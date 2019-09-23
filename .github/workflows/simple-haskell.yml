@@ -1,0 +1,19 @@
+name: Haskell Stack CI
+
+on: [push]
+
+jobs:
+  build:
+   
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v1
+    - name: Install stack
+      run: |
+        curl -sSL https://get.haskellstack.org/ | sh
+        stack setup
+    - name: Build with stack
+      run: stack build
+    - name: Run tests with stack
+      run: stack test
